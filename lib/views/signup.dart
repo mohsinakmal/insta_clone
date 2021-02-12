@@ -1,19 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:insta_clone/constants/constant.dart';
 import 'package:insta_clone/utils/color_utils.dart';
-import 'package:insta_clone/utils/size_config.dart';
 import 'package:insta_clone/utils/common_functions.dart';
+import 'package:insta_clone/utils/size_config.dart';
 
-class LoginScreen extends StatefulWidget {
+class SignUpScreen extends StatefulWidget {
 
-  static String id = 'login_screen';
+  static String id = 'signup_screen';
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -31,14 +30,24 @@ class _LoginScreenState extends State<LoginScreen> {
                 margin: EdgeInsets.only(top: SizeConfig.heightMultiplier * 4),
                 child: Center(
                   child: Text('Instagram',
-                  style: TextStyle(
-                    fontSize: SizeConfig.textMultiplier * 4,
-                    fontFamily: 'Pacifico-Regular',
-                  ),
+                    style: TextStyle(
+                      fontSize: SizeConfig.textMultiplier * 4,
+                      fontFamily: 'Pacifico-Regular',
+                    ),
                   ),
                 ),
               ),
               SizedBox(height: SizeConfig.heightMultiplier * 4,),
+              Container(
+                child: Center(
+                  child: Text('Sign up to see',
+                    style: TextStyle(
+                      fontSize: SizeConfig.textMultiplier * 4,
+                      fontFamily: 'Pacifico-Regular',
+                    ),
+                  ),
+                ),
+              ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 10.0,),
                 child: TextField(
@@ -68,19 +77,19 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Center(
                 child: Text('OR',
-                style: TextStyle(
-                  fontSize: 20.0
-                ),
+                  style: TextStyle(
+                      fontSize: 20.0
+                  ),
                 ),
               ),
               SizedBox(
                 height: SizeConfig.heightMultiplier * 8,
                 child: Center(
                   child: Text('Log in with facebook',
-                  style: TextStyle(fontSize: 15.0,
-                    color: Colors.blue.shade900,
-                    fontWeight: FontWeight.bold
-                  ),
+                    style: TextStyle(fontSize: 15.0,
+                        color: Colors.blue.shade900,
+                        fontWeight: FontWeight.bold
+                    ),
                   ),
                 ),
               ),
@@ -90,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Center(
                     child: Text('Forgot password?',
                       style: TextStyle(fontSize: 15.0,
-                          color: Colors.blue.shade900,
+                        color: Colors.blue.shade900,
                       ),
                     ),
                   ),
@@ -103,16 +112,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Don't have an account?",
-                      style: TextStyle(
-                        fontSize: 17.0,
-                      ),
+                        style: TextStyle(
+                          fontSize: 17.0,
+                        ),
                       ),
                       SizedBox(width: SizeConfig.widthMultiplier * 2,),
                       Text('Sign up',
-                      style: TextStyle(
-                        fontSize: 17.0,
-                        color: Colors.blue,
-                      ),
+                        style: TextStyle(
+                          fontSize: 17.0,
+                          color: Colors.blue,
+                        ),
                       )
                     ],
                   ),

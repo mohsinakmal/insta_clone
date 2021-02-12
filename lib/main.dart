@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta_clone/views/signup.dart';
 import 'utils/screen_util.dart';
 import 'views/login.dart';
 import 'utils/size_config.dart';
@@ -7,7 +8,11 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyApp(),
+      initialRoute: SignUpScreen.id,
+      routes: {
+        SignUpScreen.id: (context) => SignUpScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+      },
     ),
   );
 }
@@ -25,7 +30,7 @@ class MyApp extends StatelessWidget {
         return OrientationBuilder(
           builder: (context, orientation) {
             SizeConfig().init(constraints, orientation);
-            return Login();
+            return LoginScreen();
           },
         );
       },
