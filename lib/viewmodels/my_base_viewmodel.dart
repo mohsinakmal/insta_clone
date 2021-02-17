@@ -7,9 +7,6 @@ import 'package:stacked/stacked.dart';
 
 class MyBaseViewModel extends BaseViewModel{
   var navService = locator<NavigationViewModel>();
-  FirebaseAuth auth = FirebaseAuth.instance;
+  FirebaseAuth mAuth = FirebaseAuth.instance;
   FirebaseFirestore fireStore = FirebaseFirestore.instance;
-
-
-
 }

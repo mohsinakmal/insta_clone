@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:insta_clone/viewmodels/navigation_viewmodel.dart';
 import 'package:insta_clone/views/account.dart';
@@ -11,9 +12,10 @@ import 'utils/screen_util.dart';
 import 'views/login.dart';
 import 'utils/size_config.dart';
 
-void main() {
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  configure();
+  await Firebase.initializeApp();
+  await configure();
   runApp(
     MaterialApp(
       navigatorKey: locator<NavigationViewModel>().navigationKey,
